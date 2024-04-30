@@ -1,0 +1,83 @@
+#include<iostream>
+using namespace std;
+class calculator
+{
+private:
+int a;
+int b;
+public:
+calculator()
+{}
+calculator(int x,int y)
+{
+a=x;
+b=y;
+}
+void show();
+void addition();
+void subtraction();
+void multiplication();
+void division();
+};
+int main()
+{
+int num1,num2,choice,r;
+calculator s;
+r=1;
+cout<<"Welcome to simple calculator........................."<<endl;
+cout<<"Enter the two numbers..........\n";
+cin>>num1>>num2;
+calculator op(num1,num2);
+op.show();
+while(r)
+{
+cout<<"\n Enter the choice that \n 1.Additon...\n2.Subtraction... \n3.Multiplucation...\n4.Division.....\n";
+cin>>choice;
+
+switch(choice)
+{
+case 1:
+            cout<<"Addition.....\n";
+            op.addition();
+            break;
+case 2:
+          cout<<"Subtraction......\n";
+          op.subtraction();
+          break;
+case  3:         
+          cout<<"Multiplication.....\n";
+          op.multiplication();
+          break;
+case 4:
+           cout<<"Division.........\n";
+           op.division();
+           break;
+default:
+          cout<<"You had Entered a Invalid number.......";
+     }
+  cout<<"Do you want to continue again \n 1.Continue:\n2.Exit : \n";
+  cin>>r;
+  }
+  
+  return 0;
+  }
+  void calculator::show()
+  {
+  cout<<"\nThe two numbers value are a and b is:\n"<<a<<" & "<<b<<endl;
+  }
+  void calculator::addition()
+  {
+   cout<<"The addition of two numbers(a and b) is :"<<a+b<<endl;
+   }
+   void calculator::subtraction()
+  {
+   cout<<"The subtraction two numbers(a and b) is :"<<a-b<<endl;
+   }
+   void calculator::multiplication()
+  {
+   cout<<"The multiplication two numbers(a and b) is :"<<a*b<<endl;
+   }
+   void calculator::division()
+  {
+   cout<<"The division two numbers(a and b) is :"<<a/b<<endl;
+   }
